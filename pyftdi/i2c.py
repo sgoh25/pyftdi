@@ -471,7 +471,7 @@ class I2cController:
             self._ck_idle = max(ck_su_sta, ck_buf)
             self._ck_delay = ck_buf
             # extra delay in between read bytes to ensure valid data
-            self._rd_byte_delay = self._ck_delay * 3
+            self._rd_byte_delay = self._ck_delay * 8
             if clkstrch:
                 self._i2c_mask = self.I2C_MASK_CS
             else:
